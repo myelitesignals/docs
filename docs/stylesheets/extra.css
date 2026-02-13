@@ -107,28 +107,30 @@ body {
 }
 
 /* Back-to-site link injected via template */
-.es-back-link {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.7rem;
+a.es-back-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem;
+  font-size: 0.68rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.4);
-  text-decoration: none;
-  margin-left: auto;
-  margin-right: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none !important;
+  margin-right: 0.5rem;
   white-space: nowrap;
   transition: color 0.15s ease;
+  vertical-align: middle;
+  line-height: 1;
 }
 
-.es-back-link:hover {
-  color: rgba(255, 255, 255, 0.8);
+a.es-back-link:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.es-back-link svg {
-  width: 12px;
-  height: 12px;
-  opacity: 0.5;
+a.es-back-link svg {
+  width: 11px !important;
+  height: 11px !important;
+  min-width: 11px;
+  flex-shrink: 0;
 }
 
 /* Header nav tabs */
