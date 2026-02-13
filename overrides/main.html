@@ -26,6 +26,20 @@
   {{ super() }}
   <script>
     document$.subscribe(function() {
+      // Inject "elitesignals.com" back-link into header
+      var headerInner = document.querySelector(".md-header__inner");
+      if (headerInner && !document.querySelector(".es-back-link")) {
+        var searchEl = headerInner.querySelector(".md-search");
+        var link = document.createElement("a");
+        link.href = "https://elitesignals.com";
+        link.target = "_blank";
+        link.className = "es-back-link";
+        link.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>elitesignals.com';
+        if (searchEl) {
+          headerInner.insertBefore(link, searchEl);
+        }
+      }
+
       // Wire up the homepage search CTA to open MkDocs Material's search
       var searchCTA = document.getElementById("searchCTA");
       if (searchCTA) {
