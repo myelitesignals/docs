@@ -126,51 +126,74 @@ body {
    SIDEBAR NAVIGATION
    ============================================ */
 
+/* Hide redundant "Elite Signals Docs" root label in sidebar */
+.md-nav--primary > .md-nav__title {
+  display: none;
+}
+
 /* Sidebar container */
 [data-md-color-scheme="slate"] .md-sidebar {
   background: transparent;
 }
 
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__inner {
+  padding-top: 0.4rem;
+}
+
 /* Section labels (Getting Started, FAQ) */
 [data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link,
 [data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--section > label.md-nav__link {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
-  padding: 0.6rem 0.75rem 0.3rem;
-  margin-top: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 0.6rem 0.25rem;
+  margin-top: 1rem;
+  pointer-events: none;
 }
 
-/* Nav links */
+/* Remove margin on first section label */
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--section:first-child > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--section:first-child > label.md-nav__link {
+  margin-top: 0.2rem;
+}
+
+/* Nav links - all */
 [data-md-color-scheme="slate"] .md-nav__link {
-  padding: 0.4rem 0.75rem;
+  padding: 0.3rem 0.6rem;
   transition: all 0.15s ease;
-  border-radius: 6px;
-  font-size: 0.8rem;
+  border-radius: 5px;
+  font-size: 0.78rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.45;
+  margin: 1px 0;
 }
 
 [data-md-color-scheme="slate"] .md-nav__link:hover {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* Active nav link */
 [data-md-color-scheme="slate"] .md-nav__link--active,
 [data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
-  color: var(--es-lime);
+  color: var(--es-lime) !important;
   font-weight: 500;
   background: rgba(203, 251, 69, 0.06);
 }
 
-/* TOC sidebar links */
+/* TOC sidebar links (integrated) */
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.35);
+  padding: 0.2rem 0.6rem;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 [data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link--active {
@@ -178,8 +201,14 @@ body {
   font-weight: 500;
 }
 
+/* Reduce nested indent */
 .md-nav__item .md-nav__item {
-  padding-left: 0.2rem;
+  padding-left: 0.15rem;
+}
+
+/* Tighter spacing between nav items */
+.md-nav__item {
+  padding: 0;
 }
 
 /* ============================================
@@ -225,10 +254,10 @@ body {
 }
 
 .es-hero__title {
-  font-size: 3.2rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
   margin: 0 0 1rem;
   color: #fff;
 }
@@ -241,11 +270,12 @@ body {
 }
 
 .es-hero__subtitle {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
+  font-weight: 400;
   color: var(--es-text-muted);
-  max-width: 550px;
+  max-width: 520px;
   margin: 0 auto 2.5rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* Homepage Search CTA */
@@ -367,19 +397,19 @@ body {
 }
 
 .es-card__title {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: #fff;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.5rem;
   position: relative;
   z-index: 1;
 }
 
 .es-card__desc {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   color: var(--es-text-muted);
-  line-height: 1.55;
-  margin: 0 0 1.2rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
   position: relative;
   z-index: 1;
 }
@@ -388,8 +418,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 500;
   color: var(--es-lime) !important;
   position: relative;
   z-index: 1;
@@ -433,9 +463,9 @@ body {
 }
 
 .es-cta__title {
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-size: 1.6rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
   color: #fff;
   margin: 0 0 0.5rem;
   position: relative;
@@ -497,47 +527,47 @@ body {
    ARTICLE PAGES - Typography
    ============================================ */
 .md-typeset {
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.68);
+  letter-spacing: 0.005em;
 }
 
 .md-typeset h1 {
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 650;
+  letter-spacing: -0.025em;
   color: #ffffff;
-  font-size: 1.9rem;
-  padding-left: 0.75rem;
-  border-left: 3px solid var(--es-lime);
-  margin-bottom: 1.2rem;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(var(--es-lime-rgb), 0.15);
 }
 
 .md-typeset h2 {
   font-weight: 600;
-  letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, 0.95);
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid transparent;
-  background-image: linear-gradient(var(--es-dark), var(--es-dark)), linear-gradient(90deg, rgba(var(--es-lime-rgb), 0.2), transparent);
-  background-size: 100% 100%, 100% 1px;
-  background-position: bottom, bottom;
-  background-repeat: no-repeat;
-  margin-top: 2.5rem;
-  font-size: 1.3rem;
+  letter-spacing: -0.015em;
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 1.2rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .md-typeset h3 {
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.88);
-  margin-top: 2rem;
-  font-size: 1.05rem;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
   letter-spacing: -0.01em;
 }
 
 .md-typeset h4 {
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
 }
 
 /* Links */
@@ -766,7 +796,7 @@ body {
     padding: 3rem 1.5rem 2rem;
   }
   .es-hero__title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   .es-hero__subtitle {
     font-size: 1rem;
