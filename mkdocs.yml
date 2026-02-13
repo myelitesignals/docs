@@ -8,7 +8,7 @@ theme:
   favicon: assets/favicon.png
   logo: assets/logo.png
   font:
-    text: Inter
+    text: DM Sans
     code: JetBrains Mono
   palette:
     - scheme: slate
@@ -27,9 +27,7 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.tracking
-    - navigation.tabs
     - navigation.sections
-    - navigation.expand
     - navigation.top
     - navigation.footer
     - search.suggest

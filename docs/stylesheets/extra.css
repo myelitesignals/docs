@@ -27,9 +27,17 @@
   --md-accent-fg-color--transparent: rgba(203, 251, 69, 0.1);
 }
 
-/* --- Global --- */
+/* --- Global Typography & Rendering --- */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 ::selection {
@@ -86,8 +94,9 @@ html {
 }
 
 .md-header__title {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 0.9rem;
 }
 
 .md-header__button.md-logo img,
@@ -114,59 +123,63 @@ html {
 }
 
 /* ============================================
-   NAVIGATION TABS
-   ============================================ */
-.md-tabs {
-  background-color: rgba(17, 19, 22, 0.9);
-  border-bottom: 1px solid var(--es-border);
-}
-
-.md-tabs__link {
-  opacity: 0.6;
-  transition: all 0.25s ease;
-  font-weight: 500;
-  font-size: 0.82rem;
-  letter-spacing: 0.01em;
-}
-
-.md-tabs__link--active,
-.md-tabs__link:hover {
-  color: var(--es-lime) !important;
-  opacity: 1;
-}
-
-.md-tabs__link--active {
-  border-bottom: 2px solid var(--es-lime);
-  font-weight: 600;
-}
-
-/* ============================================
    SIDEBAR NAVIGATION
    ============================================ */
+
+/* Sidebar container */
+[data-md-color-scheme="slate"] .md-sidebar {
+  background: transparent;
+}
+
+/* Section labels (Getting Started, FAQ) */
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--section > label.md-nav__link {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  padding: 0.6rem 0.75rem 0.3rem;
+  margin-top: 0.8rem;
+}
+
+/* Nav links */
 [data-md-color-scheme="slate"] .md-nav__link {
-  border-left: 2px solid transparent;
-  padding-left: 0.8rem;
-  transition: all 0.2s ease;
-  border-radius: 0;
-  font-size: 0.82rem;
+  padding: 0.4rem 0.75rem;
+  transition: all 0.15s ease;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
 }
 
 [data-md-color-scheme="slate"] .md-nav__link:hover {
-  color: var(--es-lime);
-  border-left-color: rgba(203, 251, 69, 0.3);
-  background: rgba(203, 251, 69, 0.03);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 [data-md-color-scheme="slate"] .md-nav__link--active,
 [data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
   color: var(--es-lime);
-  font-weight: 600;
-  border-left-color: var(--es-lime);
-  background: rgba(203, 251, 69, 0.05);
+  font-weight: 500;
+  background: rgba(203, 251, 69, 0.06);
+}
+
+/* TOC sidebar links */
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link--active {
+  color: var(--es-lime);
+  font-weight: 500;
 }
 
 .md-nav__item .md-nav__item {
-  padding-left: 0.4rem;
+  padding-left: 0.2rem;
 }
 
 /* ============================================
@@ -483,37 +496,48 @@ html {
 /* ============================================
    ARTICLE PAGES - Typography
    ============================================ */
+.md-typeset {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .md-typeset h1 {
-  font-weight: 800;
-  letter-spacing: -0.035em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.9rem;
   padding-left: 0.75rem;
   border-left: 3px solid var(--es-lime);
   margin-bottom: 1.2rem;
 }
 
 .md-typeset h2 {
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.95);
   padding-bottom: 0.5em;
   border-bottom: 1px solid transparent;
-  background-image: linear-gradient(var(--es-dark), var(--es-dark)), linear-gradient(90deg, rgba(var(--es-lime-rgb), 0.3), transparent);
+  background-image: linear-gradient(var(--es-dark), var(--es-dark)), linear-gradient(90deg, rgba(var(--es-lime-rgb), 0.2), transparent);
   background-size: 100% 100%, 100% 1px;
   background-position: bottom, bottom;
   background-repeat: no-repeat;
   margin-top: 2.5rem;
+  font-size: 1.3rem;
 }
 
 .md-typeset h3 {
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.88);
   margin-top: 2rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
 }
 
 .md-typeset h4 {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
 }
 
 /* Links */
@@ -533,8 +557,8 @@ html {
 
 /* Bold text */
 [data-md-color-scheme="slate"] .md-typeset strong {
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: 650;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
 }
 
 /* Lists */
