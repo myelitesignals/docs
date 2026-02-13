@@ -66,8 +66,8 @@ body {
   --md-typeset-a-color: #CBFB45;
   --md-code-bg-color: #1a1a1a;
   --md-code-fg-color: #e0e0e0;
-  --md-footer-bg-color: #0f0f0f;
-  --md-footer-bg-color--dark: #0a0a0a;
+  --md-footer-bg-color: #171717;
+  --md-footer-bg-color--dark: #171717;
 }
 
 /* --- Light Mode --- */
@@ -79,29 +79,50 @@ body {
 }
 
 /* ============================================
-   HEADER - Glassmorphism
+   HEADER - Floating pill nav (matches elitesignals.com)
    ============================================ */
 .md-header {
-  background: rgba(17, 19, 22, 0.85);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(203, 251, 69, 0.08);
-  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  box-shadow: none;
+  border-bottom: none;
+  position: sticky;
+  padding: 0.6rem 1rem;
+}
+
+.md-header .md-header__inner {
+  background: rgba(23, 23, 23, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.4rem 0.6rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .md-header[data-md-state="shadow"] {
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: none;
+}
+
+.md-header[data-md-state="shadow"] .md-header__inner {
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .md-header__title {
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 1.8rem;
+  height: 1.6rem;
+}
+
+/* Header nav tabs */
+.md-header .md-tabs {
+  background: transparent;
 }
 
 /* Header search */
@@ -217,7 +238,7 @@ body {
 .es-hero {
   position: relative;
   text-align: center;
-  padding: 4.5rem 2rem 2.5rem;
+  padding: 2.5rem 2rem 2.5rem;
   overflow: hidden;
 }
 
@@ -665,40 +686,61 @@ body {
 }
 
 /* ============================================
-   FOOTER
+   FOOTER (matches elitesignals.com)
    ============================================ */
 .md-footer {
-  background: #0f0f0f;
-  border-top: 1px solid transparent;
-  background-image: linear-gradient(#0f0f0f, #0f0f0f), linear-gradient(90deg, transparent, rgba(var(--es-lime-rgb), 0.2), transparent);
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+  background: #171717;
+  border-top: none;
 }
 
 .md-footer-meta {
-  background: #0a0a0a;
+  background: #171717;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.md-footer__inner {
+  padding: 1rem 0;
 }
 
 .md-footer__inner .md-social__link {
+  color: rgba(255, 255, 255, 0.5);
   transition: color 0.2s ease;
 }
 
 .md-footer__inner .md-social__link:hover {
-  color: var(--es-lime);
+  color: #fff;
+}
+
+.md-footer__inner .md-social__link svg {
+  max-height: 1rem;
 }
 
 .md-copyright {
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
 }
 
 /* Navigation footer (prev/next) */
 .md-footer__link {
   transition: all 0.2s ease;
+  padding: 1.2rem 1rem;
 }
 
 .md-footer__link:hover .md-footer__title {
   color: var(--es-lime);
+}
+
+.md-footer__direction {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.4;
+}
+
+.md-footer__title {
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 /* ============================================
@@ -759,7 +801,7 @@ body {
     margin-right: 1rem;
   }
   .es-hero {
-    padding: 3rem 1.5rem 2rem;
+    padding: 2rem 1.5rem 2rem;
   }
   .es-hero__title {
     font-size: 1.8rem;
