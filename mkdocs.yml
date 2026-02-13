@@ -1,0 +1,91 @@
+site_name: Elite Signals Docs
+site_url: https://docs.elitesignals.com
+site_description: Knowledge base and guides for EliteAlgo trading system by Elite Signals
+
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: assets/favicon.png
+  logo: assets/logo.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.integrate
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/elitesignals
+    - icon: fontawesome/solid/globe
+      link: https://elitesignals.com
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - EliteAlgo Course & Full Setup: getting-started/elitealgo-course-full-setup.md
+    - Trend Sniper Strategy: getting-started/trend-sniper-strategy.md
+    - Supply & Demand + Signals Strategy: getting-started/supply-demand-signals-strategy.md
+    - Elite Price Action Concepts Strategy: getting-started/elite-price-action-concepts-strategy.md
+  - FAQ:
+    - What is Elite Signals?: faq/what-is-elite-signals.md
+    - What is EliteAlgo?: faq/what-is-elitealgo.md
+    - What is TradingView?: faq/what-is-tradingview.md
+    - How to Get EliteAlgo: faq/how-to-get-elitealgo.md
+    - What Do I Need to Use EliteAlgo?: faq/what-do-i-need-to-use-elitealgo.md
+    - Why Join Discord for EliteAlgo?: faq/why-join-discord-for-elitealgo.md
+    - How Do I Download Discord?: faq/how-do-i-download-discord.md
+    - Can I Cancel & How?: faq/can-i-cancel-and-how.md
+    - Refund Policy: faq/refund-policy.md
+    - Markets & Timeframes: faq/markets-and-timeframes.md
+    - Does EliteAlgo Repaint?: faq/does-elitealgo-repaint.md
+    - Do I Need a TradingView Account?: faq/do-i-need-tradingview-account.md
+    - Do I Need TradingView Pro?: faq/do-i-need-tradingview-pro.md
+    - Is EliteAlgo Beginner Friendly?: faq/is-elitealgo-beginner-friendly.md
+    - Can I Use EliteAlgo on MetaTrader?: faq/can-i-use-on-metatrader.md
+    - Free Trial Available?: faq/free-trial.md
+    - I Don't See Invite-Only Scripts: faq/invite-only-scripts.md
+    - How Long for Access After Purchase?: faq/how-long-for-access.md
