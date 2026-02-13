@@ -3,4 +3,52 @@
 {% block extrahead %}
   <meta name="author" content="Elite Signals">
   <meta name="keywords" content="EliteAlgo, trading, TradingView, indicators, signals, Elite Signals">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }} - Elite Signals Docs">
+  <meta property="og:description" content="Knowledge base and guides for EliteAlgo trading system by Elite Signals">
+  <meta property="og:url" content="https://docs.elitesignals.com">
+  <meta property="og:site_name" content="Elite Signals Docs">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title }} - Elite Signals Docs">
+  <meta name="twitter:description" content="Knowledge base and guides for EliteAlgo trading system by Elite Signals">
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document$.subscribe(function() {
+      // Wire up the homepage search CTA to open MkDocs Material's search
+      var searchCTA = document.getElementById("searchCTA");
+      if (searchCTA) {
+        searchCTA.addEventListener("click", function() {
+          // MkDocs Material search toggle
+          var searchInput = document.querySelector(".md-search__input");
+          if (searchInput) {
+            searchInput.focus();
+          } else {
+            // Fallback: toggle search via label
+            var label = document.querySelector("label[for='__search']");
+            if (label) label.click();
+          }
+        });
+        searchCTA.style.cursor = "pointer";
+      }
+
+      // Detect Mac for keyboard shortcut hint
+      var kbdEl = document.querySelector(".es-search-cta__kbd");
+      if (kbdEl) {
+        var isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
+        kbdEl.textContent = isMac ? "\u2318K" : "Ctrl+K";
+      }
+    });
+  </script>
 {% endblock %}

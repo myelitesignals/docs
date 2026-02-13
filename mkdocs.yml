@@ -31,6 +31,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -47,6 +48,8 @@ extra:
       link: https://elitesignals.com
   generator: false
 
+copyright: "&copy; 2025 Elite Signals. All rights reserved."
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -57,6 +60,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
 
