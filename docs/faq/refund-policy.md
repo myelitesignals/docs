@@ -10,21 +10,17 @@ In the event of a duplicate payment for an EliteAlgo membership, we will promptl
 
 ### Refunds
 
-Refunds for EliteAlgo memberships are not available, except in cases of duplicate payments. All sales are final.
+Refunds for EliteAlgo memberships are available in the case of duplicate payments. If you have questions about your subscription, please contact [**support@elitesignals.com**](mailto:support@elitesignals.com).
 
-### Renewals
+### Cancellation
 
-Membership renewals for EliteAlgo are non-refundable. It is your responsibility to manage your subscription and cancel it prior to the renewal date if you no longer wish to continue. Refunds will not be issued for subscriptions renewed due to failure to cancel on time.
+You can cancel your EliteAlgo subscription at any time before the next renewal date. We recommend cancelling by contacting [**support@elitesignals.com**](mailto:support@elitesignals.com) if you no longer wish to continue.
 
 ## Elite X Automated Trading Bot
 
 ### Refund Requests
 
-Refunds for the Elite X Automated Trading Bot are not available under any circumstances. All sales are final. To ensure you get the most out of your purchase, we provide initial setup assistance and ongoing support. For help, please contact our support team at [**support@elitesignals.com**](mailto:support@elitesignals.com).
-
-## Cancellation Policy
-
-All memberships can be canceled at any time, free of charge. You may submit cancellation requests directly through your account settings or by contacting our support team at [**support@elitesignals.com**](mailto:support@elitesignals.com).
+Each Elite X purchase includes a lifetime license. Because of this, refunds are generally not available. However, our goal is to ensure you get the most value from Elite X, which is why we provide full setup guidance and ongoing support. For help, please contact our support team at [**support@elitesignals.com**](mailto:support@elitesignals.com).
 
 ---
 
