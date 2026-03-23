@@ -114,7 +114,7 @@ hide:
   <p class="es-cta__label">Ready to start trading?</p>
   <h2 class="es-cta__title">Get EliteAlgo today</h2>
   <div class="es-cta__buttons">
-    <a href="https://elitesignals.com/plans" target="_blank" class="es-btn es-btn--primary">Get EliteAlgo</a>
+    <a href="https://elitesignals.com" target="_blank" class="es-btn es-btn--primary">Get EliteAlgo</a>
     <a href="https://discord.gg/elitesignals" target="_blank" class="es-btn es-btn--outline">Join Discord</a>
   </div>
 </section>
