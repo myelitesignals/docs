@@ -14,7 +14,7 @@ Refunds for EliteAlgo memberships are available in the case of duplicate payment
 
 ### Cancellation
 
-You can cancel your EliteAlgo subscription at any time before the next renewal date. We recommend cancelling by contacting [**support@elitesignals.com**](mailto:support@elitesignals.com) if you no longer wish to continue.
+You can cancel your EliteAlgo subscription at any time before the next renewal date in one click via the Portal at [**portal.elitesignals.com**](https://portal.elitesignals.com). Cancellations are processed instantly.
 
 ## Elite X Automated Trading Bot
 

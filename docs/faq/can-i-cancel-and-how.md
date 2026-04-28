@@ -2,14 +2,16 @@
 
 ## Cancel Your EliteAlgo Membership Anytime
 
-Yes, you can cancel your EliteAlgo membership at any time — no questions asked.
+Yes, you can cancel your EliteAlgo membership at any time.
 
 ### How to Cancel
 
-To cancel, please send us an email at [**support@elitesignals.com**](mailto:support@elitesignals.com). Our support team will process your request promptly.
+Cancel in **one click** from the Portal at [**portal.elitesignals.com**](https://portal.elitesignals.com). Sign in, go to **Settings → Billing**, and click cancel. That's it.
 
 ### Processing Time
 
-Please allow up to **12 to 24 hours** for the cancellation to be fully processed. We recommend cancelling before your next renewal date to avoid being charged for the next billing cycle.
+Cancellations made through the Portal are processed **instantly**. Your subscription is cancelled (or scheduled to end at the close of your current billing period) the moment you confirm.
 
-If you need any further assistance, don't hesitate to reach out. We're here to help!
+We recommend cancelling before your next renewal date to avoid being charged for the next billing cycle.
+
+If you need any further assistance, don't hesitate to reach out at [**support@elitesignals.com**](mailto:support@elitesignals.com). We're here to help!
